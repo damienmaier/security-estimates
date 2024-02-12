@@ -1,6 +1,6 @@
 from math import *
-from model_BKZ import *
-from proba_util import gaussian_center_weight
+from .model_BKZ import *
+from .proba_util import gaussian_center_weight
 
 log_infinity = 9999
 

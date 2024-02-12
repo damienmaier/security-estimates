@@ -1,5 +1,5 @@
-from MSIS_security import MSIS_summarize_attacks, MSISParameterSet
-from MLWE_security import MLWE_summarize_attacks, MLWEParameterSet
+from .MSIS_security import MSIS_summarize_attacks, MSISParameterSet
+from .MLWE_security import MLWE_summarize_attacks, MLWEParameterSet
 from math import sqrt
 
 

@@ -1,5 +1,5 @@
 from math import *
-from model_BKZ import *
+from .model_BKZ import *
 
 log_infinity = 9999
 
