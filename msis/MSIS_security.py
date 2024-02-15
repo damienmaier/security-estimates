@@ -103,12 +103,14 @@ def MSIS_summarize_attacks(ps):
         raise ValueError("Unknown norm: "+ps.norm)
 
     (m_pc, b_pc, c_pc) = SIS_optimize_attack(q, max_w, h, B, cost_attack=attack, cost_svp=svp_classical, verbose=True)
-    (m_pq, b_pq, c_pq) = SIS_optimize_attack(q, max_w, h, B, cost_attack=attack, cost_svp=svp_quantum, verbose=False)
-    (m_pp, b_pp, c_pp) = SIS_optimize_attack(q, max_w, h, B, cost_attack=attack, cost_svp=svp_plausible, verbose=False)
+    # (m_pq, b_pq, c_pq) = SIS_optimize_attack(q, max_w, h, B, cost_attack=attack, cost_svp=svp_quantum, verbose=False)
+    # (m_pp, b_pp, c_pp) = SIS_optimize_attack(q, max_w, h, B, cost_attack=attack, cost_svp=svp_plausible, verbose=False)
 
-    check_eq(m_pc, m_pq, m_pp)
-    check_eq(b_pc, b_pq, b_pp)
+    # check_eq(m_pc, m_pq, m_pp)
+    # check_eq(b_pc, b_pq, b_pp)
 
-    print("SIS & %d & %d & %d & %d & %d"%(m_pq, b_pq, int(floor(c_pc)), int(floor(c_pq)), int(floor(c_pp))))
+    # print("SIS & %d & %d & %d & %d & %d"%(m_pq, b_pq, int(floor(c_pc)), int(floor(c_pq)), int(floor(c_pp))))
 
-    return (b_pq, int(floor(c_pc)), int(floor(c_pq)), int(floor(c_pp)))
+    # return (b_pq, int(floor(c_pc)), int(floor(c_pq)), int(floor(c_pp)))
+
+    return c_pc
