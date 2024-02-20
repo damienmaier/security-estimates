@@ -114,3 +114,14 @@ def MSIS_summarize_attacks(ps):
     # return (b_pq, int(floor(c_pc)), int(floor(c_pq)), int(floor(c_pp)))
 
     return c_pc
+
+
+def is_security_at_least(ps, security_level):
+    q = ps.q
+    h = ps.n * ps.h
+    w = ps.n * ps.w
+    B = ps.B
+
+    b = security_level / svp_classical(1)
+
+    return BKZ_first_length(q, h, w-h, b) > B
